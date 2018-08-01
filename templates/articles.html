@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Recomendations to {{user}}</h1>
+
+    {% for article in articles %}
+        <ul cass="list-group">
+           <li class="list-group-item" ><a> {{article}} </a></li>
+        </ul>    
+    {% endfor %}
+
+    <h1>Closest Neighbors of {{user}}</h1>
+    
+    {% for user in closest_neighbors %}
+        <ul cass="list-group">
+            <li class="list-group-item" ><a> {{user}} </a></li>
+        </ul>    
+    {% endfor %}
+
+    <h5>The RMSE for this recomendation is {{rmse}}.</h5>
+
+    <h2>Does that make sense?</h2>
+    <p>Take a look at the movies watched by this user.</p>
+
+    {% for movie in watched %}
+        <ul cass="list-group">
+            <li class="list-group-item" ><a> {{movie}} </a></li>
+        </ul>    
+    {% endfor %}
+{% endblock %}  

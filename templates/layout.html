@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <title>My Flask Aplication</title>
+
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" />
+    <link href="https://getbootstrap.com/docs/4.1/examples/navbar-fixed/navbar-top-fixed.css" rel="stylesheet">
+
+    <!-- <script src="main.js"></script> -->
+</head>
+<body>
+    {% include 'includes/_navbar.html' %}
+
+    
+    <div class="container">
+        {% block body %} {% endblock %}
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+</body>
+</html>
